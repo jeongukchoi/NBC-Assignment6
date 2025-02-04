@@ -61,21 +61,21 @@ void AMoveRailings::Tick(float DeltaTime)
 
 	switch (MoveAxis) {
 	case EAxisType::X:
-		if (abs(StartLocation.X - GetActorLocation().X) > MoveRange) {
+		if (abs(StartLocation.X - GetActorLocation().X) + abs(MoveSpeed * DeltaTime) > MoveRange) {
 			MoveSpeed *= -1;
 		}
 		AddActorWorldOffset(FVector(MoveSpeed * DeltaTime, 0, 0));
 		break;
 
 	case EAxisType::Y:
-		if (abs(StartLocation.Y - GetActorLocation().Y) > MoveRange) {
+		if (abs(StartLocation.Y - GetActorLocation().Y) + abs(MoveSpeed * DeltaTime) > MoveRange) {
 			MoveSpeed *= -1;
 		}
 		AddActorWorldOffset(FVector(0, MoveSpeed * DeltaTime, 0));
 		break;
 
 	case EAxisType::Z:
-		if (abs(StartLocation.Z - GetActorLocation().Z) > MoveRange) {
+		if (abs(StartLocation.Z - GetActorLocation().Z) + abs(MoveSpeed * DeltaTime) > MoveRange) {
 			MoveSpeed *= -1;
 		}
 		AddActorWorldOffset(FVector(0, 0, MoveSpeed * DeltaTime));
