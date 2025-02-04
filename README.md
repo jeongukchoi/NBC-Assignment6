@@ -29,7 +29,7 @@
   - 콜리전 박스의 OnComponentBeginOverlap 이벤트에 플레이어 오버랩 시 시작 위치로 이동시키는 클래스 메서드를 함수 이름으로 바인드 (AddDynamic)
  
 ## 실행 방법
-.gitignore 로 VS 나 언리얼엔진에서 생성한 캐시 등 부가적인 파일이 포함하지 않았습니다.
+.gitignore 로 VS 나 언리얼엔진에서 생성한 캐시 등을 포함하지 않은 상태입니다.
 클론을 받아 실행을 희망하시는 경우, 아래 순서대로 하면 될 것 같습니다..
 1. uproject 파일 우클릭 - Generate Visual Studio project files
 2. 프로젝트 파일 열어 에디터 실행
